@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapunzel's Tower - Doi Mae Salong</title>
+    <meta name="description" content="Experience breathtaking views at Rapunzel's Tower, an Airbnb in Doi Mae Salong. Enjoy our swimming pool, badminton court, and snooker room while surrounded by the beauty of the mountains.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#CC6333',
+                            hover: '#b55226',
+                        },
+                        dark: '#211E1B',
+                        light: '#FFEACC'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        html { scroll-behavior: smooth; }
+        .scroll-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900 tracking-tight">Rapunzel's Tower</a>
+            
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-gray-600 hover:text-brand transition font-medium">Home</a>
+                <a href="#amenities" class="text-gray-600 hover:text-brand transition font-medium">Amenities</a>
+                <a href="#reviews" class="text-gray-600 hover:text-brand transition font-medium">Reviews</a>
+                <a href="#contact" class="text-gray-600 hover:text-brand transition font-medium">Contact</a>
+                <a href="https://www.airbnb.ca/rooms/825780733425012130" target="_blank" class="bg-brand hover:bg-brand-hover text-white px-6 py-2 rounded-full font-medium transition shadow-md hover:shadow-lg">
+                    Book Now
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a href="#home" class="text-gray-600 hover:text-brand font-medium">Home</a>
+                <a href="#amenities" class="text-gray-600 hover:text-brand font-medium">Amenities</a>
+                <a href="#reviews" class="text-gray-600 hover:text-brand font-medium">Reviews</a>
+                <a href="#contact" class="text-gray-600 hover:text-brand font-medium">Contact</a>
+                <a href="https://www.airbnb.ca/rooms/825780733425012130" target="_blank" class="bg-brand text-white px-6 py-3 rounded-full text-center font-medium">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/A85e7p70MKF3lqM1/607e5541-7723-4ad0-ab8a-800a83df8a7e-m6LZVv31MncL20Lr.jpeg" alt="Doi Mae Salong Views" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/45"></div>
+            </div>
+            
+            <div class="relative z-10 container mx-auto px-6 text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up">Experience the Magic of Doi Mae Salong</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto font-light opacity-90">Stay in a stunning tower with breathtaking mountain views and exceptional amenities.</p>
+                
+                <div class="flex justify-center items-center space-x-1 mb-10">
+                    <span class="text-yellow-400 text-xl">★★★★★</span>
+                    <span class="text-sm opacity-90 ml-2 uppercase tracking-wider">Rated 5 stars by guests</span>
+                </div>
+                
+                <a href="https://www.airbnb.ca/rooms/825780733425012130" target="_blank" class="bg-brand hover:bg-brand-hover text-white px-10 py-4 rounded-full text-lg font-bold transition shadow-lg transform hover:-translate-y-1 inline-block">
+                    Book Your Stay
+                </a>
+            </div>
+        </section>
+
+        <!-- Welcome Section -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="w-full lg:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Welcome to Rapunzel's Tower Retreat</h2>
+                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">Experience breathtaking views and luxury amenities at our Airbnb, featuring a three-story tower, swimming pool, badminton court, and snooker room, all nestled in the beauty of Doi Mae Salong.</p>
+                        
+                        <div class="bg-light p-6 rounded-xl mb-8 border-l-4 border-brand">
+                            <p class="text-gray-800 italic font-medium text-lg">"Your friends are going to want to hear about that time you stayed in Rapunzel's Tower."</p>
+                        </div>
+
+                        <div class="flex items-center space-x-4 mb-8">
+                            <div class="text-yellow-500">★★★★★</div>
+                            <div class="text-gray-800 font-bold">John - USA</div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://www.airbnb.ca/rooms/825780733425012130" target="_blank" class="bg-brand hover:bg-brand-hover text-white px-8 py-3 rounded-full font-medium transition shadow-md">
+                                Book Now
+                            </a>
+                            <a href="#amenities" class="border-2 border-gray-800 text-gray-800 px-8 py-3 rounded-full font-medium hover:bg-gray-800 hover:text-white transition">
+                                Explore Amenities
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full lg:w-1/2 relative">
+                        <div class="absolute -top-6 -left-6 w-full h-full bg-light rounded-3xl z-0 transform -rotate-2"></div>
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=690,fit=crop/A85e7p70MKF3lqM1/1a7763d8-a055-4ca8-bce2-d8a4ebc085c3-A0xlLNPk8jheX0al.jpeg" alt="Tower Interior" class="relative z-10 rounded-3xl shadow-2xl w-full object-cover h-[500px] hover:scale-[1.02] transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amenities Section -->
+        <section id="amenities" class="py-24 bg-[#FFFDF9]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Exceptional Mountain Retreat</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">Experience stunning views and luxurious amenities at our unique Airbnb tower in Chiang Rai.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Pool Card -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-72 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-300"></div>
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=553,fit=crop/A85e7p70MKF3lqM1/4c819998-bb72-4297-9bc1-385e3c51990e-A0xlLNPkzDukWxoa.jpeg" alt="Swimming Pool" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold mb-3 text-gray-800 group-hover:text-brand transition">Relaxing Swimming Pool</h3>
+                            <p class="text-gray-600 leading-relaxed">Enjoy a refreshing swim with breathtaking mountain views surrounding our beautiful pool area.</p>
+                        </div>
+                    </div>
+
+                    <!-- Snooker Card -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-72 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-300"></div>
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,h=1080,fit=crop/A85e7p70MKF3lqM1/999ccb97-ca48-4fe6-9b76-701b5e43fad5-Yyv9eoOaj6IZM5D6.jpeg" alt="Snooker Room" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold mb-3 text-gray-800 group-hover:text-brand transition">Enjoy the Snooker Room</h3>
+                            <p class="text-gray-600 leading-relaxed">Challenge friends to a game in our well-equipped snooker room with stunning views.</p>
+                        </div>
+                    </div>
+
+                    <!-- Badminton Card -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-72 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-300"></div>
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,h=1080,fit=crop/A85e7p70MKF3lqM1/d833381f-53a1-4b7a-9b78-936edf9b0418-Yyv9eoWw0eswN3kq.jpeg" alt="Badminton Court" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold mb-3 text-gray-800 group-hover:text-brand transition">Badminton Court</h3>
+                            <p class="text-gray-600 leading-relaxed">Engage in friendly matches while enjoying the serene mountain landscape at our court.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Our Services</h2>
+                    <p class="text-gray-600 max-w-3xl mx-auto text-lg">Tucked right inside a secluded forest is an infinity pool, snooker room, high speed internet, gazebos, fountains, and a badminton court. And it's all solar-powered.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Item 1 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-full h-80 mb-6 rounded-2xl overflow-hidden relative shadow-md">
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=538,fit=crop/A85e7p70MKF3lqM1/607e5541-7723-4ad0-ab8a-800a83df8a7e-m6LZVv31MncL20Lr.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Fairytale">
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">An Unforgettable Fairytale</h3>
+                        <p class="text-gray-600">You stayed in a castle tower on top of a mountain. What better way to say "I had a great time in Chiang Rai?"</p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-full h-80 mb-6 rounded-2xl overflow-hidden relative shadow-md">
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=538,fit=crop/A85e7p70MKF3lqM1/d833381f-53a1-4b7a-9b78-936edf9b0418-Yyv9eoWw0eswN3kq.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Nature">
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Stunning Nature</h3>
+                        <p class="text-gray-600">Experience the pristine beauty of Doi Mae Salong from above. From spectacular sunsets and views, to the glorious wildflowers down below.</p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-full h-80 mb-6 rounded-2xl overflow-hidden relative shadow-md">
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=538,fit=crop/A85e7p70MKF3lqM1/999ccb97-ca48-4fe6-9b76-701b5e43fad5-Yyv9eoOaj6IZM5D6.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Solar">
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Luxury Amenities, Powered by the Sun</h3>
+                        <p class="text-gray-600">Sustainable luxury. Enjoy all modern comforts while being eco-friendly in our solar-powered retreat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Greenleas Cottages Gallery -->
+        <section class="py-24 bg-[#FFFDF9]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Greenleas Cottages</h2>
+                    <p class="text-gray-600">Explore stunning views and unforgettable experiences at our tower.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px]">
+                    <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-xl">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024,h=548,fit=crop/A85e7p70MKF3lqM1/71456a1f-f6e3-4246-aa1b-26dd0221c4af-AzGXarxaVeF8Bqyr.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Main View">
+                    </div>
+                    <div class="col-span-1 relative group overflow-hidden rounded-xl">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=391,fit=crop/A85e7p70MKF3lqM1/b3807660-e0b9-480f-be59-fdf6cfd00781-Yyv9eoOBoJTNBjOP.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Cottage 1">
+                    </div>
+                    <div class="col-span-1 relative group overflow-hidden rounded-xl">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image,w=375,h=391,fit=crop/A85/format=autoe7p70MKF3lqM1/bc8e3cfa-3bcc-4c26-b2f7-ec2e8f26a2da-YbNB6az6j8uPXEKM.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Cottage 2">
+                    </div>
+                    <div class="col-span-1 relative group overflow-hidden rounded-xl">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=391,fit=crop/A85e7p70MKF3lqM1/d7158151-7b4d-43bc-9874-b9d0b88b04a8-dOqajbPjMqSP149y.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Cottage 3">
+                    </div>
+                    <div class="col-span-1 relative group overflow-hidden rounded-xl">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=391,fit=crop/A85e7p70MKF3lqM1/cf0d5e24-8fdc-4b23-af79-b8dd896f0af1-YZ98D2OpQafJRlro.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Cottage 4">
+                    </div>
+                     <div class="col-span-2 relative group overflow-hidden rounded-xl">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=391,fit=crop/A85e7p70MKF3lqM1/51de34de-7365-4e6f-a261-e53a0979c99b-AE0P3p8BkWtg98Rx.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Cottage 5">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Guest Reviews</h2>
+                    <p class="text-gray-600">Hear what our guests say about their unforgettable stay.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-light p-10 rounded-2xl relative shadow-sm">
+                        <span class="text-8xl text-gray-800/5 absolute top-2 left-4 font-serif">"</span>
+                        <div class="relative z-10">
+                            <p class="text-gray-700 mb-8 text-lg leading-relaxed italic">Simon is very responsive, friendly, helpful &amp; hospitable. We live in Thailand about 4 hours away and arrived late (8pm) due to unrelated issues and he was helpful providing some food and assuring we were welcome. He was available our entire stay, making sure any need was met.</p>
+                            <div class="flex items-center">
+                                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=375,fit=crop/A85e7p70MKF3lqM1/screenshot-from-2025-03-10-10-49-48-Yyv9eo8wOqT4wNy6.png" class="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm mr-4" alt="Merle">
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg">Merle</h4>
+                                    <div class="flex text-yellow-500 text-sm mb-1">★★★★★</div>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wide font-medium">Airbnb - January 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-light p-10 rounded-2xl relative shadow-sm">
+                        <span class="text-8xl text-gray-800/5 absolute top-2 left-4 font-serif">"</span>
+                        <div class="relative z-10">
+                            <p class="text-gray-700 mb-8 text-lg leading-relaxed italic">We enjoyed Table Mountain the two nights that were there. You are really in the nature. The dogs + cats were also mega friendly and love people. Definitely recommended.</p>
+                            <div class="flex items-center">
+                                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=375,fit=crop/A85e7p70MKF3lqM1/screenshot-from-2025-03-10-10-47-20-YD0lZpVBNBtWGeEG.png" class="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm mr-4" alt="Jen">
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg">Jen</h4>
+                                    <div class="flex text-yellow-500 text-sm mb-1">★★★★★</div>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wide font-medium">Airbnb - November 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark text-white pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-6">Rapunzel's Tower</h3>
+                    <p class="text-gray-400 mb-6 max-w-md leading-relaxed">Experience breathtaking views and luxurious amenities at our fairytale tower retreat.</p>
+                    <div class="space-y-3 text-gray-300">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <span>089 064 5100</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>contact@rapunzelstower.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-lg text-white">Relax</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-brand transition">Swimming Pool</a></li>
+                        <li><a href="#" class="hover:text-brand transition">Nature Views</a></li>
+                        <li><a href="#" class="hover:text-brand transition">Solar Power</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-lg text-white">Explore</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-brand transition">Badminton Court</a></li>
+                        <li><a href="#" class="hover:text-brand transition">Snooker Room</a></li>
+                        <li><a href="#" class="hover:text-brand transition">Local Area</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-gray-500 text-sm">© 2025. All rights reserved.</p>
+                
+                <form class="flex w-full md:w-auto max-w-md" onsubmit="event.preventDefault(); alert('Thank you for your inquiry');">
+                    <input type="email" placeholder="Your email for inquiries" class="px-5 py-3 rounded-l-lg text-gray-900 w-full focus:outline-none border border-transparent focus:border-brand" required>
+                    <button type="submit" class="bg-brand hover:bg-brand-hover px-6 py-3 rounded-r-lg font-bold transition shadow-lg">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
